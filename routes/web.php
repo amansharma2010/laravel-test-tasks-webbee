@@ -19,7 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/schedule-event/{id}', [EventsController::class, 'postScheduleEvent']);
+Route::get('/event/{id}', [EventsController::class, 'getSingleEvent']);
+Route::get('/events', [EventsController::class, 'getEvents']);
 
-Route::get('/events', [EventsController::class, 'getEventsWithWorkshops']);
+Route::get('/eventswithworkshops', [EventsController::class, 'getEventsWithWorkshops']);
 Route::get('/futureevents', [EventsController::class, 'getFutureEventsWithWorkshops']);
 Route::get('/menu', [MenuController::class, 'getMenuItems']);

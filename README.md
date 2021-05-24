@@ -60,3 +60,32 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Please check the following API endpoints:
+
+###### For getting all events data (GET Method)
+
+```
+{base_url}/events
+{base_url}/events?days_limit=20
+```
+
+###### For getting single event data (GET Method)
+
+```
+{base_url}/event/{event_id}
+```
+
+###### For getting single event with specific date (GET Method)
+
+```
+{base_url}/event/{event_id}?booking_date=2021-05-26
+```
+
+###### Schedule event (POST Method)
+
+```
+{base_url}/schedule-event/{event_id}
+Body FORM data
+{'first_name' : 'Rick', 'last_name' : 'Martin', 'email' : 'rick@example.com', 'slot_date' : '2021-05-26', 'slot_time' : '10:20'}
+```
